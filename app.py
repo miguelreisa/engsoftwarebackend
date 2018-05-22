@@ -19,7 +19,6 @@ api = Api(app)
 #cria um novo endpoint /auth em que se envia username e password e sao levados ao metodo authenticate feito por nos, se der match(ver funcao authenticate), devolve o user (na func authenticate)
 #este auth endpoint devolve um jwt token que pode ser enviado no proximo request feito. quando enviamos um token jwt, o jwt chama a funcao identity(colocada como param aqui) e ve o user correcto para esse token
 #se conseguir fizer isso é porque o user esta autenticado e pode fazer o request
-jwt = JWT(app, authenticate, identity)
 
 api.add_resource(UserRegister, '/register')
 api.add_resource(UserLogin, '/login')
